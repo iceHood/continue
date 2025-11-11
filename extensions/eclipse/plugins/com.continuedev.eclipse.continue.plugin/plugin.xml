@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="com.continuedev.eclipse.continue"
+            class="com.continuedev.eclipse.continue.ui.ContinueView"
+            icon="icons/continue.png"
+            id="com.continuedev.eclipse.continue.ui.view"
+            name="Continue">
+      </view>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               closeable="true"
+               id="com.continuedev.eclipse.continue.ui.view"
+               minimized="false"
+               moveable="true"
+               relationship="right"
+               relative="org.eclipse.ui.views.ContentOutline"
+               showTitle="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+</plugin>
